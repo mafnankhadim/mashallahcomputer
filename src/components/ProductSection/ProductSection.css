@@ -1,0 +1,65 @@
+/* Product Section - Custom additions only */
+/* Base styles are in public/assets/css/style.css */
+
+/* Owl Carousel button reset for React */
+.product_list .owl-nav button {
+  background: transparent !important;
+  border: none;
+  padding: 0;
+  margin: 0;
+}
+
+.product_list .owl-prev {
+  margin-right: 15px;
+}
+
+/* Mobile responsive */
+@media (max-width: 479px) {
+  .product_list .owl-nav {
+    display: none;
+  }
+}
+
+@media (min-width: 480px) and (max-width: 599px) {
+  .product_list .owl-nav {
+    top: -15%;
+    right: 6%;
+  }
+}
+
+/* Grid layout for large screens */
+.product-grid {
+  display: none;
+}
+
+@media (min-width: 992px) {
+  .banner-slider {
+    display: none;
+  }
+
+  .product-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+    align-items: start;
+    margin-top: 30px;
+  }
+
+  .product-grid .product_single_item {
+    background: transparent;
+    padding: 0;
+  }
+
+  .product-grid .product-box-thumb img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+  }
+}
+
+/* Center the section-level Show All Products button */
+.section_all_btn {
+  text-align: center;
+  margin-top: 30px;
+}
