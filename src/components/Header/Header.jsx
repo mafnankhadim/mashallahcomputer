@@ -41,7 +41,7 @@ const Header = () => {
   const menuItems = [
     { title: "Home", link: "/", hasSubmenu: false },
     { title: "About", link: "/about", hasSubmenu: false },
-    { title: "Products", link: "/shop", hasSubmenu: false },
+    { title: "Products", link: "/shop-two", hasSubmenu: false },
     { title: "Jobs", link: "/job", hasSubmenu: false },
     // {
     //   title: "Page",
