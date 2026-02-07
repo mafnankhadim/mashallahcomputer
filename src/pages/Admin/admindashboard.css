@@ -21,9 +21,39 @@
   margin-left: 70px;
 }
 
+.admin-sidebar-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+  z-index: 9999;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.2s ease;
+  display: none;
+}
+
+.admin-layout:not(.sidebar-collapsed) .admin-sidebar-overlay {
+  opacity: 1;
+  pointer-events: auto;
+}
+
 .admin-content-area {
   padding: 24px;
   flex: 1;
+}
+
+@media (max-width: 991px) {
+  .admin-sidebar-overlay {
+    display: block;
+  }
+
+  .admin-main {
+    margin-left: 0;
+  }
+
+  .admin-layout.sidebar-collapsed .admin-main {
+    margin-left: 0;
+  }
 }
 
 /* ===== Stat Cards ===== */

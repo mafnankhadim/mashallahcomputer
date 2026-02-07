@@ -359,51 +359,20 @@ const Header = () => {
           >
             <i className="fas fa-times"></i>
           </button>
-          <h2 className="heading_title text-uppercase">
-            Cart Items - <span>{cartItems.length}</span>
-          </h2>
-
           <div className="cart_items_list">
-            {cartItems.map((item) => (
-              <div className="cart_item" key={item.id}>
-                <div className="item_image">
-                  <img src={item.image} alt="" />
-                </div>
-                <div className="item_content">
-                  <h4 className="item_title">{item.title}</h4>
-                  <span className="item_price">{item.price}</span>
-                  <button type="button" className="remove_btn">
-                    <i className="fas fa-times"></i>
-                  </button>
-                </div>
-              </div>
-            ))}
+            <div className="coming-soon-message" style={{ textAlign: 'center', padding: '40px 20px', fontSize: '18px', fontWeight: '600', color: '#666' }}>
+              <p style={{ margin: '0 0 10px 0' }}>Coming Soon</p>
+              <p style={{ fontSize: '14px', fontWeight: '400', color: '#999', margin: '0' }}>This feature is currently under development.</p>
+            </div>
           </div>
-          <div className="total_price text-uppercase">
-            <span>Sub Total:</span>
-            <span>$76.00</span>
-          </div>
-          <ul className="btns_group ul_li">
-            <li>
-              <Link to="/cart" className="btn btn_primary text-uppercase">
-                View Cart
-              </Link>
-            </li>
-            <li>
-              <Link
-                to="/checkout"
-                className="btn btn_border border_black text-uppercase"
-              >
-                Checkout
-              </Link>
-            </li>
-          </ul>
         </div>
         <div
           className="cart_sidebar_overlay"
           onClick={() => setIsCartOpen(false)}
         ></div>
       </div>
+
+      {/* WhatsApp Button and Scroll Up will be added at App level */}
     </>
   );
 };

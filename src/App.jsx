@@ -4,6 +4,7 @@ import Preloader from "./components/Preloader/Preloader";
 import Header from "./components/Header/Header";
 import Footer from "./components/Footer/Footer";
 import ScrollUp from "./components/ScrollUp/ScrollUp";
+import WhatsAppButton from "./components/WhatsAppButton/WhatsAppButton";
 
 // Lazy load pages for better performance
 const Home = lazy(() => import("./pages/Home/Home"));
@@ -90,6 +91,7 @@ function AppInner() {
       </Suspense>
 
       {!isAdmin && <Footer />}
+      {!isAdmin && <WhatsAppButton />}
       {!isAdmin && <ScrollUp />}
     </>
   );

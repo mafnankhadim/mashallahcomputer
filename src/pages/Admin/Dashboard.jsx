@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import {
   AreaChart,
   Area,
@@ -52,14 +52,41 @@ const trackingData = [
 /* ---------- Component ---------- */
 const AdminDashboard = () => {
   const [sidebarCollapsed, setSidebarCollapsed] = useState(false);
+  const [isMobile, setIsMobile] = useState(false);
   const [powerView, setPowerView] = useState("week");
   const [salesTab, setSalesTab] = useState("charts");
 
   const toggleSidebar = () => setSidebarCollapsed((p) => !p);
 
+  useEffect(() => {
+    const handleResize = () => {
+      const mobile = window.innerWidth < 992;
+      setIsMobile(mobile);
+      setSidebarCollapsed(mobile ? true : false);
+    };
+
+    handleResize();
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
   return (
     <div className={`admin-layout${sidebarCollapsed ? " sidebar-collapsed" : ""}`}>
-      <AdminSidebar collapsed={sidebarCollapsed} onToggle={toggleSidebar} />
+      <AdminSidebar
+        collapsed={sidebarCollapsed}
+        onToggle={toggleSidebar}
+        onItemClick={() => {
+          if (isMobile) setSidebarCollapsed(true);
+        }}
+      />
+
+      {isMobile && !sidebarCollapsed && (
+        <div
+          className="admin-sidebar-overlay"
+          onClick={toggleSidebar}
+          aria-hidden="true"
+        ></div>
+      )}
 
       <div className="admin-main">
         <AdminTopbar onSidebarToggle={toggleSidebar} />
