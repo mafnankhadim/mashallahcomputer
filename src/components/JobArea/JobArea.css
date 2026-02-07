@@ -17,6 +17,35 @@
   border: 1px solid rgba(0, 0, 0, 0.05);
 }
 
+/* Make job list columns stretch so all cards are equal height */
+.job_section .row[role="list"] > [class*="col-"] {
+  display: flex;
+}
+
+.single-blog-box.job_card {
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 auto;
+}
+
+.single-blog-box.job_card .job_content {
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 auto;
+}
+
+/* Push footer to bottom so cards align */
+.single-blog-box.job_card .job_footer {
+  margin-top: auto;
+}
+
+/* Ensure thumbnail image doesn't distort when card height grows */
+.single-blog-thumb img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
 /* Job Badge on Image */
 .job_badge {
   position: absolute;

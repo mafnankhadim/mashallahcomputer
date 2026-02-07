@@ -5,61 +5,31 @@ import "./CollectionArea.css";
 import collectionImg from "/assets/images/home_one/collection1.png";
 import collectionImg2 from "/assets/images/home_one/collection002.png";
 import collectionShp2 from "/assets/images/home_one/collection_shp2.png";
+import services from "../../data/services";
 
 const CollectionArea = () => {
-  const servicesLeft = [
-    {
-      key: "mobile",
-      icon: "fas fa-headphones",
-      title: "Mobile Accessories",
-      desc: "Headsets, chargers, cases & cables",
-    },
-    {
-      key: "scan",
-      icon: "fas fa-file-alt",
-      title: "Document Scanning",
-      desc: "Scan to email, PDF creation & archiving",
-    },
-    {
-      key: "accessories",
-      icon: "fas fa-plug",
-      title: "Accessories & Cases",
-      desc: "Screen guards, power banks & protective cases",
-    },
-    {
-      key: "forms",
-      icon: "fas fa-edit",
-      title: "Online Form Filling",
-      desc: "Assistance completing and submitting forms online",
-    },
-  ];
+  // Use central services list and split into two columns
+  const iconFor = (title) => {
+    const t = title.toLowerCase();
+    if (t.includes("photocopy") || t.includes("photocopy")) return "fas fa-copy";
+    if (t.includes("b/w") || t.includes("printing") || t.includes("print")) return "fas fa-print";
+    if (t.includes("color")) return "fas fa-paint-brush";
+    if (t.includes("scan") || t.includes("scanning") || t.includes("document")) return "fas fa-file-alt";
+    if (t.includes("computer")) return "fas fa-desktop";
+    if (t.includes("mobile") || t.includes("phone")) return "fas fa-mobile-alt";
+    if (t.includes("duplicate") || t.includes("id")) return "fas fa-id-card";
+    if (t.includes("online")) return "fas fa-globe";
+    if (t.includes("photo") || t.includes("studio")) return "fas fa-camera";
+    if (t.includes("laminat")) return "fas fa-file";
+    if (t.includes("mug")) return "fas fa-mug-hot";
+    if (t.includes("t-shirt") || t.includes("tshirt")) return "fas fa-tshirt";
+    if (t.includes("graphic") || t.includes("design")) return "fas fa-palette";
+    return "fas fa-concierge-bell";
+  };
 
-  const servicesRight = [
-    {
-      key: "photo",
-      icon: "fas fa-camera",
-      title: "Photography",
-      desc: "Professional passport & ID photos in all sizes",
-    },
-    {
-      key: "print",
-      icon: "fas fa-print",
-      title: "Printing & Photocopy",
-      desc: "Fast B/W & colour prints, A4–A3 copies",
-    },
-    {
-      key: "graphic",
-      icon: "fas fa-palette",
-      title: "Graphic Designing",
-      desc: "Logo design, branding & creative graphics",
-    },
-    {
-      key: "mug",
-      icon: "fas fa-mug-hot",
-      title: "Mug Printing",
-      desc: "Personalised photo mugs & gifts",
-    },
-  ];
+  const half = Math.ceil(services.length / 2);
+  const servicesLeft = services.slice(0, half);
+  const servicesRight = services.slice(half);
 
   return (
     <section className="collection_area" aria-labelledby="collection-heading">
@@ -77,11 +47,11 @@ const CollectionArea = () => {
                 </p>
                 <ul className="collection_services">
                   {servicesLeft.map((s) => (
-                    <li key={s.key}>
-                      <i className={s.icon} aria-hidden="true"></i>
+                    <li key={s.id}>
+                      <i className={iconFor(s.title)} aria-hidden="true"></i>
                       <div>
                         <strong>{s.title}</strong>
-                        <span>{s.desc}</span>
+                        <span>{s.description}</span>
                       </div>
                     </li>
                   ))}
@@ -122,11 +92,11 @@ const CollectionArea = () => {
                 </p>
                 <ul className="collection_services">
                   {servicesRight.map((s) => (
-                    <li key={s.key}>
-                      <i className={s.icon} aria-hidden="true"></i>
+                    <li key={s.id}>
+                      <i className={iconFor(s.title)} aria-hidden="true"></i>
                       <div>
                         <strong>{s.title}</strong>
-                        <span>{s.desc}</span>
+                        <span>{s.description}</span>
                       </div>
                     </li>
                   ))}

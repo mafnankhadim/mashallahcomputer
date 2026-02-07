@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import "./AboutArea.css";
 
 // Import images from public folder
-import aboutImg2 from "/assets/images/home_one/about02.jpg";
+import aboutImg2 from "/assets/images/home_one/about.jpg";
 import aboutShp from "/assets/images/home_one/about_shp.png";
 import aboutShp2 from "/assets/images/home_one/about_shp2.png";
 import settingIcon from "/assets/images/home_one/setting_icon.png";
@@ -35,9 +35,9 @@ const AboutArea = () => {
               {/* Section Title */}
               <div className="section_title">
                 <h4>Our Services</h4>
-                <h1 id="about-services-heading">
+                {/* <h1 id="about-services-heading">
                   Print, Photo & Digital Services
-                </h1>
+                </h1> */}
               </div>
               <p>
                 We provide photocopying and printing, online form filling,
@@ -56,7 +56,7 @@ const AboutArea = () => {
                 </ul>
               </div>
               <div className="about_btn printmax_btn">
-                <Link to="/about">
+                <Link to="/shop">
                   Get Started<i className="flaticon flaticon-right-arrow"></i>
                   <span></span>
                 </Link>

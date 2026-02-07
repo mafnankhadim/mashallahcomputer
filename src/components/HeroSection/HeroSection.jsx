@@ -96,7 +96,7 @@ const HeroSection = () => {
               {/* Slider Button */}
               <div className="slider_button">
                 <div className="banner_btn printmax_btn">
-                  <Link to="/contact">
+                  <Link to="/shop" aria-label="Shop now">
                     Get Started{" "}
                     <i className="flaticon flaticon-right-arrow"></i>
                     <span></span>

@@ -120,7 +120,7 @@ const About = () => {
       <MarqueeArea items={marqueeItems} />
 
       {/* Reusable Feature Area (uses project services) */}
-      <FeatureArea items={serviceFeatures} />
+      {/* <FeatureArea items={serviceFeatures} /> */}
     </>
   );
 };

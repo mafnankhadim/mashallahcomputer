@@ -5,9 +5,6 @@ import "./Header.css";
 // Import images
 import logo from "/assets/images/logo3.png";
 import productImg1 from "/assets/images/home_one/product_img1.png";
-import productImg2 from "/assets/images/home_one/product_img2.png";
-import productImg3 from "/assets/images/home_one/product_img3.png";
-import productImg4 from "/assets/images/home_one/product_img4.png";
 import collection1 from "/assets/images/home_one/collection1.jpg";
 import collection2 from "/assets/images/home_one/collection2.jpg";
 import collection3 from "/assets/images/home_one/collection3.jpg";
@@ -41,7 +38,8 @@ const Header = () => {
   const menuItems = [
     { title: "Home", link: "/", hasSubmenu: false },
     { title: "About", link: "/about", hasSubmenu: false },
-    { title: "Products", link: "/shop-two", hasSubmenu: false },
+    { title: "Services", link: "/service", hasSubmenu: false },
+    { title: "Products", link: "/shop", hasSubmenu: false },
     { title: "Jobs", link: "/job", hasSubmenu: false },
     // {
     //   title: "Page",
@@ -107,6 +105,56 @@ const Header = () => {
 
   return (
     <>
+
+     <section className="topber_area">
+        <div className="container-fluid">
+          <div className="row align-items-center">
+            <div className="col-lg-4">
+              <div className="topber_right_social">
+                <h4 className="topber_follow">FOLLOW US :</h4>
+                <ul>
+                  <li>
+                    <a href="#">
+                      <i className="fab fa-linkedin-in"></i>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <i className="fab fa-pinterest-p"></i>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <i className="fab fa-facebook-f"></i>
+                    </a>
+                  </li>
+                  <li>
+                    <a className="top-social-icon-left" href="#">
+                      <i className="fa-brands fa-x-twitter"></i>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div className="col-lg-4">
+              <div className="top_print_text">
+                <p>Limited Time Offer: 10% OFF on all services & accessories — Visit now!</p>
+              </div>
+            </div>
+            <div className="col-lg-4">
+              <div className="header-address-info">
+                <p>
+                  <i className="bi bi-telephone-fill"></i>
+                  <span>+92 345 4140830</span>
+                  <i className="bi bi-envelope"></i>
+                  <span>ameer.ottoman@gmail.com</span>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    
       {/* Desktop Header */}
       <div
         className={`printmax-header-area upper ${isSticky ? "sticky_nav" : ""}`}
@@ -119,9 +167,9 @@ const Header = () => {
                 <Link className="logo-wrapper" to="/">
                   <img src={logo} alt="logo" className="logo-img" />
                   <div className="logo-text">
-                    <span className="brand-name">MASHALLAH</span>
+                    <span className="brand-name">MASHALLAH Computer's</span>
                     <span className="brand-tagline">
-                      Computer's and Photo Studio
+                      Photo Studio & Mobile Zone
                     </span>
                   </div>
                 </Link>
@@ -161,12 +209,12 @@ const Header = () => {
                     <i className="bi bi-cart3"></i>
                     <small className="cart_counter">0</small>
                   </button>
-                  <div className="header-button printmax_btn">
+                  {/* <div className="header-button printmax_btn">
                     <Link to="/contact">
                       Get Started <i className="bi bi-chevron-double-right"></i>
                       <span></span>
                     </Link>
-                  </div>
+                  </div> */}
                   <div className="sidebar-btn">
                     <div
                       className="nav-btn navSidebar-button"
@@ -192,9 +240,9 @@ const Header = () => {
             <Link className="logo-wrapper" to="/">
               <img src={logo} alt="logo" className="logo-img" />
               <div className="logo-text">
-                <span className="brand-name">MASHALLAH</span>
+                <span className="brand-name">MASHALLAH Computer's</span>
                 <span className="brand-tagline">
-                  Computer's and Photo Studio
+                  Photo Studio & Mobile Zone
                 </span>
               </div>
             </Link>
@@ -254,44 +302,27 @@ const Header = () => {
                     </Link>
                   </div>
                   <div className="row padding-two">
-                    <div className="col-lg-6">
+                    <div className="col-lg-12">
                       <div className="content-thumb-box">
                         <img src={productImg1} alt="product" />
-                      </div>
-                    </div>
-                    <div className="col-lg-6">
-                      <div className="content-thumb-box">
-                        <img src={productImg2} alt="product" />
-                      </div>
-                    </div>
-                    <div className="col-lg-6">
-                      <div className="content-thumb-box">
-                        <img src={productImg3} alt="product" />
-                      </div>
-                    </div>
-                    <div className="col-lg-6">
-                      <div className="content-thumb-box">
-                        <img src={productImg4} alt="product" />
                       </div>
                     </div>
                   </div>
                   <div className="contact-info">
                     <h2>Contact Info</h2>
                     <ul className="list-style-one">
-                      <li>
-                        <i className="bi bi-envelope"></i>Chicago 12, Melborne
-                        City, USA
-                      </li>
-                      <li>
-                        <i className="bi bi-envelope"></i>(+001) 123-456-7890
-                      </li>
-                      <li>
-                        <i className="bi bi-envelope"></i>Example.com
-                      </li>
-                      <li>
-                        <i className="bi bi-envelope"></i>Week Days: 09.00 to
-                        18.00 Sunday: Closed
-                      </li>
+                        <li>
+                          <i className="bi bi-geo-alt"></i>Khatam-E-Nabuwat Chowk Main Bazzar Dudhu Chak
+                        </li>
+                        <li>
+                          <i className="bi bi-telephone-outbound"></i>+92 342 6024 404<br /> <i className="bi bi-telephone-outbound"></i>+92 345 4140 830
+                        </li>
+                        <li>
+                          <i className="bi bi-envelope"></i>ameer.ottoman@gmail.com
+                        </li>
+                        <li>
+                          <i className="bi bi-clock"></i>Business hours: Monday–Sunday, 8:00 AM to 9:00 PM. 
+                        </li>
                     </ul>
                   </div>
                   <ul className="social-box">

@@ -1,5 +1,5 @@
 import { useState, lazy, Suspense } from "react";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route, useLocation } from "react-router-dom";
 import Preloader from "./components/Preloader/Preloader";
 import Header from "./components/Header/Header";
 import Footer from "./components/Footer/Footer";
@@ -19,10 +19,12 @@ const PortfolioDetails = lazy(
 const Job = lazy(() => import("./pages/Job/Job"));
 const JobDetails = lazy(() => import("./pages/Job/JobDetails"));
 const Shop = lazy(() => import("./pages/Shop/Shop"));
-const ShopTwo = lazy(() => import("./pages/Shop/ShopTwo"));
+const ShopTwo = lazy(() => import("./pages/Shop/Shoptwo"));
 const ShopDetails = lazy(() => import("./pages/Shop/ShopDetails"));
 const Cart = lazy(() => import("./pages/Cart/Cart"));
 const Checkout = lazy(() => import("./pages/Checkout/Checkout"));
+const AdminLogin = lazy(() => import("./pages/Admin/Login"));
+const AdminDashboard = lazy(() => import("./pages/Admin/Dashboard"));
 const NotFound = lazy(() => import("./pages/NotFound/NotFound"));
 
 // Loading fallback component
@@ -40,6 +42,17 @@ const PageLoader = () => (
 );
 
 function App() {
+  return (
+    <Router>
+      <AppInner />
+    </Router>
+  );
+}
+
+function AppInner() {
+  const location = useLocation();
+  const isAdmin = location.pathname.startsWith("/admin");
+
   const [showPreloader, setShowPreloader] = useState(true);
 
   const handlePreloaderComplete = () => {
@@ -47,9 +60,12 @@ function App() {
   };
 
   return (
-    <Router>
+    <>
+      {/** Restore old preloader behavior: show on initial load, then remove */}
       {showPreloader && <Preloader onComplete={handlePreloaderComplete} />}
-      <Header />
+
+      {!isAdmin && <Header />}
+
       <Suspense fallback={<PageLoader />}>
         <Routes>
           <Route path="/" element={<Home />} />
@@ -67,13 +83,17 @@ function App() {
           <Route path="/shop-details" element={<ShopDetails />} />
           <Route path="/cart" element={<Cart />} />
           <Route path="/checkout" element={<Checkout />} />
+          <Route path="/admin/login" element={<AdminLogin />} />
+          <Route path="/admin/dashboard" element={<AdminDashboard />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </Suspense>
-      <Footer />
-      <ScrollUp />
-    </Router>
+
+      {!isAdmin && <Footer />}
+      {!isAdmin && <ScrollUp />}
+    </>
   );
 }
+
 
 export default App;

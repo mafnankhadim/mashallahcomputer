@@ -5,13 +5,19 @@ import marqueeImg from "/assets/images/home_one/marquee_img.png";
 
 const MarqueeArea = () => {
   const services = [
-    "Photocopy & Printing",
+    "Photocopy Services",
+    "B/W Printing",
+    "Color Printing",
+    "Document Scanning",
+    "Computer Repair",
+    "Mobile Repair",
+    "Duplicate ID Cards",
     "Online Form Filling",
     "Photo Studio Services",
     "Mobile Accessories",
-    "Internet Cafe",
     "Document Lamination",
     "Custom Mug Printing",
+    "Custom T-Shirt Printing",
   ];
 
   return (

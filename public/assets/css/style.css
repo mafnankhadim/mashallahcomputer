@@ -2621,7 +2621,7 @@ section.about_area.style_two .about_content {
 /* ================================================ */
 
 section.service_area {
-  padding: 105px 0 120px 291px;
+  padding: 105px 70px 97px;
 }
 .service_single_item {
   background: #f7f1ee;
@@ -7036,7 +7036,7 @@ ul.list-style-one li a:hover {
 /* Sidebar widget logo sizing */
 .sidebar-info-contents .nav-logo img,
 .xs-sidebar-widget.style_two .nav-logo img {
-  max-width: 50px;
+  max-width: 62px;
   width: 100%;
   height: auto;
   display: block;

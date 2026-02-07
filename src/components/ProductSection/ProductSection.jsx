@@ -59,31 +59,31 @@ const ProductSection = () => {
       id: 1,
       image: productImg1,
       name: "Cotton Blue Hooddy",
-      price: "$ 59.00",
+      // price: "$ 59.00",
     },
     {
       id: 2,
       image: productImg2,
       name: "Product Package",
-      price: "$ 39.50",
+      // price: "$ 39.50",
     },
     {
       id: 3,
       image: productImg4,
       name: "Coffe and Tea Cup",
-      price: "$ 39.00",
+      // price: "$ 39.00",
     },
     {
       id: 4,
       image: productImg3,
       name: "Book Cover & Flyer",
-      price: "$ 39.00",
+      // price: "$ 39.00",
     },
     {
       id: 5,
       image: productImg2,
       name: "Paper Milk Container",
-      price: "$ 39.20",
+      // price: "$ 39.20",
     },
   ];
 

@@ -20,7 +20,7 @@ const Home = () => {
       <CollectionArea />
       <AboutArea />
       {/* <CollectionStyleTwo /> */}
-      {/* <CountdownArea /> */}
+      <CountdownArea />
       <ProductSection />
       {/* <FeatureStyleTwo /> */}
       <MarqueeArea />

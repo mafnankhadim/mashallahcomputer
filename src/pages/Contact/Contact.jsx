@@ -35,7 +35,7 @@ const Contact = () => {
                 </div>
                 <div className="contact_warpper_content">
                   <h3>Address</h3>
-                  <p>Khatam-e-Nabuwat Chowk Main Bazzar Dudhu Chak</p>
+                  <p>Khatam-E-Nabuwat Chowk Main Bazzar Dudhu Chak</p>
                 </div>
               </div>
             </div>
@@ -47,7 +47,7 @@ const Contact = () => {
                 <div className="contact_warpper_content">
                   <h3>Phone Number</h3>
                   <p>
-                    +92 345 4140 830 <br /> +92 342 6024 404
+                    +92 342 6024 404 <br /> +92 345 4140 830
                   </p>
                 </div>
               </div>
@@ -60,8 +60,7 @@ const Contact = () => {
                 <div className="contact_warpper_content">
                   <h3>Email Address</h3>
                   <p>
-                    example@gmail.com <br />
-                    info@gmail.com
+                    ameer.ottoman@gmail.com
                   </p>
                 </div>
               </div>
@@ -72,7 +71,7 @@ const Contact = () => {
               <div className="col-lg-6">
                 <div className="contact_map">
                   <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d48384.367867189205!2d-74.01058227968896!3d40.71751035716885!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c24fa5d33f083b%3A0xc80b8f06e177fe62!2sNew%20York%2C%20NY%2C%20USA!5e0!3m2!1sen!2sbd!4v1609671967457!5m2!1sen!2sbd"
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3373.6658705340897!2d75.02238477591649!3d32.267071109871445!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x391c017d36fc7ea3%3A0x81d7b1fd424d0fdf!2sMashallah%20Computers%20and%20Mobile%20Center!5e0!3m2!1sen!2s!4v1770398334665!5m2!1sen!2s"
                     width="90%"
                     height="520"
                     style={{ border: 0 }}

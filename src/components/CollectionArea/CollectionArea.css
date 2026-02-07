@@ -56,3 +56,50 @@
     min-width: 100%;
   }
 }
+
+/* Ensure collection cards are equal height across the row */
+.collection_area .row {
+  align-items: stretch;
+}
+
+.collection_single_item {
+  display: flex;
+  gap: 30px;
+  align-items: stretch;
+  height: 100%;
+}
+
+.collection_single_item .collection_content {
+  flex: 1 1 60%;
+  display: flex;
+  flex-direction: column;
+}
+
+.collection_single_item .collection_thumb {
+  flex: 0 0 40%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.collection_single_item .collection_thumb img {
+  max-width: 100%;
+  height: auto;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+@media (max-width: 991px) {
+  .collection_single_item {
+    flex-direction: column;
+  }
+  .collection_single_item .collection_thumb {
+    flex-basis: auto;
+  }
+  .collection_area .row > [class*="col-"] {
+    margin-bottom: 30px;
+  }
+  .collection_area .row > [class*="col-"]:last-child {
+    margin-bottom: 0;
+  }
+}

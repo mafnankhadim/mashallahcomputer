@@ -129,7 +129,7 @@ const JobArea = ({ jobs: propsJobs }) => {
                         to={`/job-details/${job.id}`}
                         aria-label={`Apply to ${job.title}`}
                       >
-                        Apply Now
+                        View Details
                         <i className="bi bi-arrow-right" aria-hidden="true"></i>
                         <span></span>
                       </Link>

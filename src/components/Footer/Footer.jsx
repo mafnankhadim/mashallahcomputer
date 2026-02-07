@@ -9,9 +9,8 @@ const Footer = () => {
   const companyLinks = [
     { title: "About Us", link: "/about" },
     { title: "Our Service", link: "/service" },
-    { title: "Pracing Plans", link: "/service" },
-    { title: "Latest Blogs", link: "/blog" },
-    { title: "Contact", link: "/contact" },
+    { title: "Pracing Plans", link: "#" },
+    { title: "Latest Jobs", link: "/job" },
   ];
 
   const serviceLinks = [
@@ -40,7 +39,7 @@ const Footer = () => {
               <p>
                 <i className="bi bi-headset-vr"></i>Speak to Our Expert at:
               </p>
-              <h6>+980 (1234) 5678</h6>
+              <h6>+92 342 6024 404</h6>
             </div>
           </div>
           <div className="col-lg-2 col-md-6">
@@ -87,10 +86,25 @@ const Footer = () => {
               <div className="footer-widget-title">
                 <h4>Contact</h4>
               </div>
-              <p className="subscribe_text">
-                Subscribe Our Latest Newsletter and Get in touch with us any
-                update
-              </p>
+               <div className="footer_contact_phone">
+                <p>
+                  <i className="bi bi-telephone-fill"></i>
+                  <span style={{ marginLeft: 8 }}>+92 342 6024 404</span>
+                  <br />
+                  <i className="bi bi-telephone-fill"></i>
+                  <span style={{ marginLeft: 8 }}>+92 345 4140 830</span>
+                  <br />
+                  <i className="bi bi-envelope-fill"></i>
+                  <span style={{ marginLeft: 8 }}>ameer.ottoman@gmail.com</span>
+                   <br />
+                  <i className="bi bi-geo-alt-fill"></i>
+                  <span style={{ marginLeft: 8 }}>Khatam-E-Nabuwat Chowk <br/> <span style={{ marginLeft: 25 }}> Main Bazzar Dudhu Chak</span></span>
+                </p>
+              </div>
+              {/* <p className="subscribe_text">
+                <i className="bi bi-geo-alt-fill"></i>
+                Khatam-E-Nabuwat Chowk <br/> Main Bazzar Dudhu Chak
+              </p> */}
               <div className="footer_from">
                 <form
                   action="https://formspree.io/f/myyleorq"
@@ -113,6 +127,7 @@ const Footer = () => {
                   </div>
                 </form>
               </div>
+             
               <div className="footer_social_icon">
                 <a href="#">
                   <i className="fab fa-facebook-f"></i>
